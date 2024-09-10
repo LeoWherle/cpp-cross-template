@@ -1,3 +1,3 @@
 _: prev: {
-  minisha256sum = prev.callPackage ./package.nix { };
+  rtype = prev.callPackage ./package.nix { };
 }

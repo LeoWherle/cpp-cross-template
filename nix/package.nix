@@ -1,7 +1,7 @@
-{ stdenv, lib, cmake, boost, openssl }:
+{ stdenv, lib, cmake, boost, raylib }:
 
 stdenv.mkDerivation {
-  name = "minisha256sum";
+  name = "rtype";
 
   src = lib.fileset.toSource {
     root = ./..;
@@ -12,5 +12,5 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ cmake ];
-  buildInputs = [ boost openssl ];
+  buildInputs = [ boost raylib ];
 }

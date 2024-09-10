@@ -18,7 +18,7 @@ in
       wantedBy = [ "multi-user.target" ];
       serviceConfig.ExecStart = ''${pkgs.socat}/bin/socat \
         TCP4-LISTEN:${builtins.toString cfg.port},reuseaddr,fork \
-        EXEC:${pkgs.minisha256sum}/bin/minisha256sum
+        EXEC:${pkgs.rtype}/bin/rtype
       '';
     };
   };

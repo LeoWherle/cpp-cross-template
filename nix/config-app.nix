@@ -8,7 +8,7 @@
   nixpkgs.overlays = [ (import ./overlay.nix) ];
 
   environment.systemPackages = with pkgs; [
-    minisha256sum
+    rtype
   ];
 
   services.hash.enable = true;

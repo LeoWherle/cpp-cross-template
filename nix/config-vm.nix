@@ -5,7 +5,7 @@
     "${modulesPath}/virtualisation/qemu-vm.nix"
   ];
 
-  virtualisation.graphics = false;
+  virtualisation.graphics = true;
   users.users.root.initialHashedPassword = "";
 
   virtualisation.forwardPorts = [

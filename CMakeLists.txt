@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.27)
-project(minisha256sum)
+project(rtype)
 
-find_package(OpenSSL REQUIRED)
 find_package(Boost REQUIRED COMPONENTS chrono)
+find_package(raylib REQUIRED)
 
-add_executable(minisha256sum src/main.cpp)
-target_link_libraries(minisha256sum Boost::chrono OpenSSL::SSL)
-set_property(TARGET minisha256sum PROPERTY CXX_STANDARD 20)
+add_executable(rtype src/main.cpp)
 
-install(TARGETS minisha256sum DESTINATION bin)
+target_link_libraries(rtype Boost::chrono raylib)
+
+set_property(TARGET rtype PROPERTY CXX_STANDARD 20)
+install(TARGETS rtype DESTINATION bin)

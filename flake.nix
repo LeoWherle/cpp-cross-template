@@ -12,9 +12,9 @@
     systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];
     perSystem = { config, pkgs, system, ... }: {
       packages = {
-        minisha256sum = pkgs.callPackage ./nix/package.nix { };
-        default = config.packages.minisha256sum;
-        clang = config.packages.minisha256sum.override {
+        rtype = pkgs.callPackage ./nix/package.nix { };
+        default = config.packages.rtype;
+        clang = config.packages.rtype.override {
           stdenv = pkgs.clangStdenv;
         };
         static = pkgs.pkgsStatic.callPackage ./nix/package.nix { };
