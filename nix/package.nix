@@ -13,7 +13,4 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ cmake ];
   buildInputs = [ boost raylib ];
-  # set environment variables
-  GLFW_ENABLE_X11_SUPPORT = true;
-
 }

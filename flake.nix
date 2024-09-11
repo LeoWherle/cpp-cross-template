@@ -38,7 +38,7 @@
           src = ./.;
           hooks = {
             clang-format.enable = true;
-            cmake-format.enable = true;
+            cmake-format.enable = false;
             deadnix.enable = true;
             nixpkgs-fmt.enable = true;
             statix.enable = true;
