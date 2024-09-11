@@ -26,7 +26,6 @@
 
         windows = pkgs.pkgsCross.mingwW64.callPackage ./nix/package.nix { };
 
-        inherit ((pkgs.nixos [ ./nix/config-app.nix ./nix/config-vm.nix ]).config.system.build) vm;
       };
 
       devShells.default = pkgs.mkShell {

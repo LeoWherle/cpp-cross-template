@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.27)
 project(rtype)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 find_package(Boost REQUIRED COMPONENTS chrono)
 find_package(raylib REQUIRED)
 
